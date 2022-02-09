@@ -213,11 +213,12 @@ For making our Fast MPN-COV meta layer can be added in a network conveniently, w
 3. `sh train.sh`
 
 #### for finetuning our fast MPN-COV model
-1. Download the initial weights from here: https://drive.google.com/open?id=19TWen7p9UDyM0Ueu9Gb22NtouR109C6j
+1. Download the initial weights from [here] (https://drive.google.com/open?id=19TWen7p9UDyM0Ueu9Gb22NtouR109C6j)
 2. export R50=/the/path/to/mpncovresnet50-15991845.pth
-3. `cp finetune/finetune.sh ./`
-4.  modify the dataset path in `finetune.sh`
-5. `sh finetune.sh`
+3. Note if the program donot run due to error of torch.load(Path(model_dir)). It is required to set an absolute path for model_dir here!
+4. `cp finetune/finetune.sh ./`
+5.  modify the dataset path in `finetune.sh`
+6. `sh finetune.sh`
 
 #### for finetuning VGG-model by using BCNN
 1. `cp finetune/two_stage_finetune.sh ./`
